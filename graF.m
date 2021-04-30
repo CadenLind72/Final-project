@@ -5,7 +5,7 @@ global color
 global style
 color = 'r';
 style = 'o';
-graph.figure = figure('numbertitle','on','name','Graph of Functions');
+graph.figure = figure('numbertitle','on','name','Graph');
 graph.xBox = uicontrol('style','edit','units','normalized','position',[.69 .8 .14 .05],'horizontalalignment','right');
 graph.xname = uicontrol('style','text','units','normalized', 'position', [.7 .85 .1 .03 ],'string','x values','horizontalalignment','right');
 graph.yBox = uicontrol('style','edit','units','normalized','position',[.83 .8 .14 .05], 'horizontalalignment','right');
@@ -70,6 +70,8 @@ function [] = reset(souce,event)
     set(graph.xBox,'String','')
     set(graph.yBox,'String','')
     set(graph.namebar,'String','')
+    set(graph.xAxisNameBox,'String','')
+    set(graph.yAxisNameBox,'String','')
     plot(0,0)
 end
 function [] = plott(source,event) 
